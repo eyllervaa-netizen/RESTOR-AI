@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>RESTOR-AI Analiz</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>RESTOR-AI Yapı Analizi</h1>
+
+
+<div class="result-image">
+
+<img 
+src="/analyzed/{{ analyzed_image }}"
+>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>Analiz Sonucu</h2>
+
+
+<p>
+<b>Hasar Seviyesi:</b>
+{{ damage }}
+</p>
+
+
+<p>
+<b>Risk Skoru:</b>
+{{ risk }}/100
+</p>
+
+
+<p>
+<b>Malzeme:</b>
+{{ material }}
+</p>
+
+
+<p>
+<b>Taşıyıcı Sistem:</b>
+{{ structure }}
+</p>
+
+
+<p>
+<b>Müdahale:</b>
+{{ scenario }}
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<h2>Teknik Veriler</h2>
+
+
+<div class="data">
+
+
+<p>
+Çatlak Oranı:
+<b>%{{ crack_percent }}</b>
+</p>
+
+
+<p>
+Parlaklık:
+<b>{{ brightness }}</b>
+</p>
+
+
+<p>
+Kontrast:
+<b>{{ contrast }}</b>
+</p>
+
+
+<p>
+Kenar Yoğunluğu:
+<b>{{ edge_density }}</b>
+</p>
+
+
+<p>
+Doku:
+<b>{{ texture_score }}</b>
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<h2>Restorasyon Önerisi</h2>
+
+
+<p>
+{{ recommendation }}
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="box">
+
+
+<h2>Açıklama</h2>
+
+
+<pre>{{ explanation }}</pre>
+
+
+</div>
+
+
+
+
+<a href="/" class="back">
+Yeni Analiz
+</a>
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
